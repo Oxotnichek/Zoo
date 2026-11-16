@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" fill="none" role="img" aria-label="ЗооДомик">
+  <g transform="translate(0 16)" fill="currentColor">
+    <path
+      fill-rule="evenodd"
+      d="M32 6 6 28.2V54a4 4 0 0 0 4 4h44a4 4 0 0 0 4-4V28.2L32 6Zm0 6.8 20 17.1V54H12V29.9L32 12.8Z"
+    />
+    <circle cx="32" cy="40" r="8"/>
+    <path d="M23.8 35.4 27.6 28.6l4.6 5.2-8.4 1.6Zm16.4 0L36.4 28.6l-4.6 5.2 8.4 1.6Z"/>
+  </g>
+  <g transform="translate(0 16)">
+    <circle cx="29" cy="39" r="1.5" fill="#121212"/>
+    <circle cx="35" cy="39" r="1.5" fill="#121212"/>
+    <circle cx="32" cy="46.2" r="2.6" fill="#e10600"/>
+  </g>
+  <text
+    x="84"
+    y="62"
+    fill="currentColor"
+    font-family="Space Grotesk, Manrope, Arial, sans-serif"
+    font-size="52"
+    font-weight="700"
+    letter-spacing="-2.2"
+  >ЗооДомик</text>
+</svg>

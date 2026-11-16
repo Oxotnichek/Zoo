@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#e8ecef" />
+  <title>ЗооДомик — корма и аксессуары для питомцев</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="blobs" aria-hidden="true">
+    <span class="blobs__a"></span>
+    <span class="blobs__b"></span>
+    <span class="blobs__c"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="topbar">
+    <div class="topbar__inner">
+      <nav class="topbar__nav">
+        <a href="#brands" data-nav="brands">Бренды</a>
+        <a href="#delivery" data-nav="delivery">Доставка</a>
+        <a href="#returns" data-nav="returns">Возврат</a>
+        <a href="#news" data-nav="news">Акции</a>
+        <a href="#about" data-nav="about">О магазине</a>
+      </nav>
+      <div class="topbar__meta">
+        <button class="city-btn" id="cityToggle" type="button">
+          <span id="cityLabel">Москва</span>
+        </button>
+        <a class="phone-link" href="tel:+74951332315">8 (495) 133-23-15</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#home" class="logo" data-nav="home">
+        <svg class="logo__mark" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true">
+          <path fill="currentColor" fill-rule="evenodd" d="M32 6 6 28.2V54a4 4 0 0 0 4 4h44a4 4 0 0 0 4-4V28.2L32 6Zm0 6.8 20 17.1V54H12V29.9L32 12.8Z"/>
+          <circle cx="32" cy="40" r="8" fill="currentColor"/>
+          <path fill="currentColor" d="M23.8 35.4 27.6 28.6l4.6 5.2-8.4 1.6Zm16.4 0L36.4 28.6l-4.6 5.2 8.4 1.6Z"/>
+          <circle cx="29" cy="39" r="1.5" fill="#1c252b"/>
+          <circle cx="35" cy="39" r="1.5" fill="#1c252b"/>
+          <circle cx="32" cy="46.2" r="2.6" fill="#c46b5c"/>
+        </svg>
+        ЗооДомик
+      </a>
+
+      <button class="catalog-btn" type="button" data-nav="catalog">Каталог</button>
+
+      <form class="header-search" id="headerSearch" role="search">
+        <input type="search" id="headerSearchInput" placeholder="Корм, миска, наполнитель…" autocomplete="off" />
+        <button type="submit" aria-label="Искать">Найти</button>
+      </form>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#quiz" data-nav="quiz">Подбор</a>
+        <a href="#delivery" data-nav="delivery">Доставка</a>
+        <a href="#contacts" data-nav="contacts">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="accountToggle" type="button" aria-label="Личный кабинет" title="Войти">Вход</button>
+        <button class="icon-btn fav-btn" id="favToggle" type="button" aria-label="Избранное" title="Избранное">
+          ♡<span class="fav-count" id="favCount" hidden>0</span>
+        </button>
+        <button class="icon-btn cart-btn" id="cartToggle" type="button" aria-label="Корзина" title="Корзина">
+          Корзина<span class="cart-count" id="cartCount" hidden>0</span>
+        </button>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero view" id="home" data-view="home">
+      <div class="hero__frame hero-3d" id="hero3d">
+        <div class="hero__photo" data-depth="28">
+          <img
+            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1600&q=85"
+            alt="Собака смотрит в кадр"
+            width="1600"
+            height="1100"
+          />
+          <div class="stamp stamp--hero" data-depth="48">с 2019<br />на Лесной</div>
+        </div>
+        <div class="hero__copy" data-depth="18">
+          <p class="kicker">Московский зоомагазин</p>
+          <h1 class="brand-mark">ЗооДомик</h1>
+          <p class="hero__lead">Корм без уговоров «берите пачку побольше». Кладём в заказ то, что реально нужно вашему псу, коту или хомяку.</p>
+          <div class="hero__cta">
+            <a class="btn btn--red" href="#catalog" data-nav="catalog">Открыть полки</a>
+            <a class="btn btn--dark" href="#stage" data-scroll="stage">Крутить витрину</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="note-strip" data-view="home">
+      <p>Сегодня по городу везём на завтра · от 3000 ₽ — без доплаты · в заказ часто кладём подарок</p>
+    </section>
+
+    <section class="section stage-section" id="stage" data-view="home">
+      <div class="section__head section__head--row">
+        <div>
+          <h2>Витрина у окна</h2>
+          <p>Листайте вбок — как на полке в магазине</p>
+        </div>
+        <div class="stage-controls">
+          <button type="button" id="stagePrev" aria-label="Назад">‹</button>
+          <button type="button" id="stageNext" aria-label="Вперёд">›</button>
+        </div>
+      </div>
+      <div class="window">
+        <div class="carousel3d" id="carousel3d">
+          <div class="carousel3d__scene">
+            <div class="carousel3d__wheel" id="carouselWheel"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories" data-view="home">
+      <div class="section__head section__head--split">
+        <h2>Кому собираем заказ</h2>
+        <p>Наведите курсор — питомцы оживают. Нажали — сразу нужные товары.</p>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section hits" data-view="home">
+      <div class="section__head section__head--row">
+        <h2>С полки у кассы</h2>
+        <a class="text-link" href="#catalog" data-nav="catalog">Все товары</a>
+      </div>
+      <div class="product-grid" id="hitsGrid"></div>
+    </section>
+
+    <section class="section quiz-teaser" data-view="home">
+      <div class="quiz-teaser__inner">
+        <div>
+          <h2>Корм подобрать сложно?<br />Мы тоже так думали.</h2>
+          <p>Три вопроса — и без лекции про протеин. Просто варианты, которые подходят.</p>
+        </div>
+        <a class="btn btn--red" href="#quiz" data-nav="quiz">Подобрать</a>
+      </div>
+    </section>
+
+    <section class="section brands-home" data-view="home">
+      <div class="section__head section__head--row">
+        <h2>Что стоит на наших полках</h2>
+        <a class="text-link" href="#brands" data-nav="brands">Все бренды</a>
+      </div>
+      <div class="brand-row" id="brandRow"></div>
+    </section>
+
+    <section class="section benefits" data-view="home">
+      <div class="benefit-grid benefit-3d">
+        <article data-tilt data-tilt-max="10">
+          <h3>Привезём, не потеряем</h3>
+          <p>Обычно на следующий день по Москве. Если курьер опаздывает — пишем сами.</p>
+        </article>
+        <article data-tilt data-tilt-max="10">
+          <h3>Можно спросить «а это нормальный корм?»</h3>
+          <p>Отвечаем в трубку и в переписке. Без скрипта «оставьте заявку».</p>
+        </article>
+        <article data-tilt data-tilt-max="10">
+          <h3>Упаковка цела — вернём деньги</h3>
+          <p>Не подошло, передумали, ошиблись с размером миски. Главное — не вскрывать.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section class="section catalog view" id="catalog" data-view="catalog" hidden>
+      <div class="section__head">
+        <h2>Каталог</h2>
+        <p id="catalogCount">Все товары</p>
+      </div>
+
+      <form class="catalog-search" id="searchBar" role="search">
+        <input type="search" id="searchInput" placeholder="Найти корм или аксессуар…" autocomplete="off" />
+        <button type="submit" class="btn btn--red btn--sm">Найти</button>
+      </form>
+
+      <div class="filter-bar" aria-label="Фильтры">
+        <div class="filters" id="petFilters" role="group" aria-label="Питомец"></div>
+        <div class="type-filters" role="group" aria-label="Тип товара">
+          <button class="chip is-active" data-type="all" type="button">Всё</button>
+          <button class="chip" data-type="food" type="button">Корм</button>
+          <button class="chip" data-type="treat" type="button">Лакомства</button>
+          <button class="chip" data-type="accessory" type="button">Аксессуары</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="catalogGrid"></div>
+      <p class="empty" id="catalogEmpty" hidden>Ничего не найдено. Сбросьте фильтр или измените запрос.</p>
+    </section>
+
+    <!-- PRODUCT -->
+    <section class="section product-page view" id="product" data-view="product" hidden>
+      <button class="back-link" id="backToCatalog" type="button">← Назад к каталогу</button>
+      <div class="product-detail" id="productDetail"></div>
+    </section>
+
+    <!-- FAVORITES -->
+    <section class="section favorites view" id="favorites" data-view="favorites" hidden>
+      <div class="section__head">
+        <h2>Избранное</h2>
+        <p id="favPageCount">Сохранённые товары</p>
+      </div>
+      <div class="product-grid" id="favGrid"></div>
+      <p class="empty" id="favEmpty" hidden>Пока пусто. Добавляйте товары сердцем на карточке.</p>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section quiz view" id="quiz" data-view="quiz" hidden>
+      <div class="section__head">
+        <h2>Подбор корма</h2>
+        <p>3 коротких вопроса — и готовая подборка</p>
+      </div>
+      <div class="quiz-box" id="quizBox"></div>
+      <div class="product-grid" id="quizResults" hidden></div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="section brands view" id="brands" data-view="brands" hidden>
+      <div class="section__head">
+        <h2>Наши бренды</h2>
+        <p>Проверенные производители кормов и аксессуаров</p>
+      </div>
+      <div class="brand-grid" id="brandGrid"></div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="section news view" id="news" data-view="news" hidden>
+      <div class="section__head">
+        <h2>Новости и акции</h2>
+      </div>
+      <div class="news-list" id="newsList"></div>
+    </section>
+
+    <!-- RETURNS -->
+    <section class="section returns view" id="returns" data-view="returns" hidden>
+      <div class="section__head">
+        <h2>Обмен и возврат</h2>
+      </div>
+      <div class="policy-list">
+        <article>
+          <h3>Когда можно вернуть</h3>
+          <p>Товар с неповреждённой упаковкой — в течение 14 дней. Корма с нарушенной целостностью возврату не подлежат.</p>
+        </article>
+        <article>
+          <h3>Как оформить</h3>
+          <p>Напишите на почту или позвоните. Подготовим замену или вернём оплату тем же способом.</p>
+        </article>
+        <article>
+          <h3>Брак и пересорт</h3>
+          <p>При обнаружении брака заменим товар за наш счёт и компенсируем доставку.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about view" id="about" data-view="about" hidden>
+      <div class="about__grid">
+        <div class="about__copy">
+          <h2>Магазин для тех, кто покупает корм в 23:40</h2>
+          <p class="lead">Мы открылись, потому что самим было лень ездить по трём точкам за паучами и наполнителем.</p>
+          <p>Сейчас привозим по Москве и дальше, держим проверенные бренды и не заставляем выбирать из 400 одинаковых пачек.</p>
+          <ul class="facts">
+            <li><strong>Лесная, 12</strong> — можно забрать самим</li>
+            <li><strong>До 21:00</strong> отвечаем в чате</li>
+            <li><strong>Бонусы</strong> копятся сами, без приложения-мучения</li>
+          </ul>
+        </div>
+        <div class="about__visual">
+          <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1100&q=80" alt="Хозяин с собакой" />
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY -->
+    <section class="section delivery view" id="delivery" data-view="delivery" hidden>
+      <div class="section__head">
+        <h2>Оплата и доставка</h2>
+      </div>
+      <div class="delivery-list">
+        <article>
+          <h3>Курьер</h3>
+          <p>От 200 ₽. Бесплатно от 3 000 ₽. Обычно на следующий день по выбранному городу.</p>
+        </article>
+        <article>
+          <h3>Пункты выдачи</h3>
+          <p>Самовывоз и постаматы 5Post. Заказ готов от 30 минут.</p>
+        </article>
+        <article>
+          <h3>Оплата</h3>
+          <p>Картой онлайн, СБП, наличными или при получении.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section contacts view" id="contacts" data-view="contacts" hidden>
+      <div class="contacts__grid">
+        <div>
+          <h2>Контакты</h2>
+          <p class="lead">Подскажем по корму и размеру амуниции.</p>
+          <dl class="contact-list">
+            <div>
+              <dt>Телефон</dt>
+              <dd><a href="tel:+74951332315">8 (495) 133-23-15</a></dd>
+            </div>
+            <div>
+              <dt>Почта</dt>
+              <dd><a href="mailto:domik.zoo@yandex.ru">domik.zoo@yandex.ru</a></dd>
+            </div>
+            <div>
+              <dt>Адрес</dt>
+              <dd>Москва, пункты выдачи по городу</dd>
+            </div>
+            <div>
+              <dt>Часы</dt>
+              <dd>Ежедневно 10:00–21:00</dd>
+            </div>
+          </dl>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>
+            Имя
+            <input type="text" name="name" required placeholder="Ваше имя" />
+          </label>
+          <label>
+            Телефон
+            <input type="tel" name="phone" required placeholder="+7" />
+          </label>
+          <label>
+            Сообщение
+            <textarea name="message" rows="3" required placeholder="Чем помочь?"></textarea>
+          </label>
+          <button class="btn btn--red" type="submit">Отправить</button>
+          <p class="form-note" id="formNote" hidden>Спасибо! Мы скоро ответим.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <a href="#home" class="logo" data-nav="home">
+          <svg class="logo__mark" width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+            <path fill="currentColor" fill-rule="evenodd" d="M32 6 6 28.2V54a4 4 0 0 0 4 4h44a4 4 0 0 0 4-4V28.2L32 6Zm0 6.8 20 17.1V54H12V29.9L32 12.8Z"/>
+            <circle cx="32" cy="40" r="8" fill="currentColor"/>
+            <path fill="currentColor" d="M23.8 35.4 27.6 28.6l4.6 5.2-8.4 1.6Zm16.4 0L36.4 28.6l-4.6 5.2 8.4 1.6Z"/>
+            <circle cx="29" cy="39" r="1.5" fill="#1c252b"/>
+            <circle cx="35" cy="39" r="1.5" fill="#1c252b"/>
+            <circle cx="32" cy="46.2" r="2.6" fill="#c46b5c"/>
+          </svg>
+          ЗооДомик
+        </a>
+        <p>Корма и аксессуары для домашних животных</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#catalog" data-nav="catalog">Каталог</a>
+        <a href="#brands" data-nav="brands">Бренды</a>
+        <a href="#returns" data-nav="returns">Возврат</a>
+        <a href="#news" data-nav="news">Новости</a>
+        <a href="#contacts" data-nav="contacts">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- CART -->
+  <aside class="drawer" id="cart" aria-hidden="true" aria-label="Корзина">
+    <div class="drawer__head">
+      <h2>Корзина</h2>
+      <button class="icon-btn" id="cartClose" type="button" aria-label="Закрыть">×</button>
+    </div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot" id="cartFoot" hidden>
+      <div class="cart__total">
+        <span>Итого</span>
+        <strong id="cartTotal">0 ₽</strong>
+      </div>
+      <p class="bonus-note">Начислим бонусы после оплаты</p>
+      <button class="btn btn--red btn--block" id="checkoutBtn" type="button">Оформить заказ</button>
+    </div>
+  </aside>
+
+  <!-- CITY MODAL -->
+  <div class="modal" id="cityModal" hidden>
+    <div class="modal__panel" role="dialog" aria-labelledby="cityTitle">
+      <div class="modal__head">
+        <h2 id="cityTitle">Город доставки</h2>
+        <button class="icon-btn" id="cityClose" type="button" aria-label="Закрыть">×</button>
+      </div>
+      <div class="city-list" id="cityList"></div>
+    </div>
+  </div>
+
+  <!-- ACCOUNT MODAL -->
+  <div class="modal" id="accountModal" hidden>
+    <div class="modal__panel" role="dialog" aria-labelledby="accountTitle">
+      <div class="modal__head">
+        <h2 id="accountTitle">Личный кабинет</h2>
+        <button class="icon-btn" id="accountClose" type="button" aria-label="Закрыть">×</button>
+      </div>
+      <form class="account-form" id="accountForm">
+        <label>
+          Телефон или email
+          <input type="text" name="login" required placeholder="+7 или mail@mail.ru" />
+        </label>
+        <label>
+          Пароль
+          <input type="password" name="password" required placeholder="••••••••" />
+        </label>
+        <button class="btn btn--red btn--block" type="submit">Войти</button>
+        <p class="form-hint">Макет: вход имитируется без сервера</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- CALLBACK -->
+  <button class="fab" id="callbackToggle" type="button" aria-label="Заказать звонок">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006.4 6.4l1.2-1.2a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg>
+  </button>
+
+  <div class="modal" id="callbackModal" hidden>
+    <div class="modal__panel" role="dialog" aria-labelledby="callbackTitle">
+      <div class="modal__head">
+        <h2 id="callbackTitle">Заказать звонок</h2>
+        <button class="icon-btn" id="callbackClose" type="button" aria-label="Закрыть">×</button>
+      </div>
+      <form class="account-form" id="callbackForm">
+        <label>
+          Имя
+          <input type="text" name="name" required placeholder="Как к вам обращаться" />
+        </label>
+        <label>
+          Телефон
+          <input type="tel" name="phone" required placeholder="+7" />
+        </label>
+        <button class="btn btn--red btn--block" type="submit">Жду звонка</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="cookie" id="cookieBar" hidden>
+    <p>Мы используем cookies, чтобы сайт работал удобнее.</p>
+    <button class="btn btn--red btn--sm" id="cookieAccept" type="button">Принять</button>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="pets3d.js"></script>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

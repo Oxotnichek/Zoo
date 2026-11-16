@@ -1,0 +1,16 @@
+# Local tunnel helpers
+PUBLIC_URL.txt
+tunnel.log
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Env / secrets
+.env
+.env.*
+*.pem
+credentials.json
